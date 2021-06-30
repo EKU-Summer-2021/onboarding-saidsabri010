@@ -10,6 +10,7 @@ coverage = '*'
 [packages]
 numpy = '*'
 pandas = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.8"
