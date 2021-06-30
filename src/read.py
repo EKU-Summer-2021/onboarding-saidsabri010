@@ -1,10 +1,13 @@
+'''
+Polynomial module with a simple Polynomial example class.
+'''
 import pandas as pd
 
-"""
-reading csv data
-"""
 
 def read_csv(source):
-    df = pd.read_csv(source)
-    print(df.describe())
+    """
+    reading csv data
+    """
+    i = pd.read_csv(source)
+    print(i.describe())
 
