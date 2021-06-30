@@ -12,7 +12,7 @@ def read_csv():
         'https://raw.githubusercontent.com/EKU-Summer-2021/intelligent_system_data/main/Intelligent%20System%20Data/CSP/CSP_53000.csv')
     df3 = pd.read_csv(
         'https://raw.githubusercontent.com/EKU-Summer-2021/intelligent_system_data/main/Intelligent%20System%20Data/CSP/CSP_6200.csv')
-    print(df.describe())
+    print(df)
     print(df2.describe())
     print(df3.describe())
 
