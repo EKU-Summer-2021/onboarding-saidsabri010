@@ -9,8 +9,6 @@ class Polynomial():
     Polynomial object which can be evaluated.
     """
 
-    __coeffs = [0]  # type: np.ndarray
-
     def __init__(self, coeffs: np.ndarray):
         self.__coeffs = coeffs
 
