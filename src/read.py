@@ -8,5 +8,5 @@ def read_csv(source):
     """
     reading csv data
     """
-    i = pd.read_csv(source)
-    return i
+    df = pd.read_csv(source)
+    return df
