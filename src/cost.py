@@ -1,16 +1,17 @@
 """
 cost file that will handle task
 """
+import pandas as pd
+from src.read import read_csv
 
 
-def cost(number_of_items):
+def cost(source):
     """
      cost method
      """
-    list_of_items = []
-    for item in range(0, number_of_items):
-        element = int(input("enter the cost of items"))
-        list_of_items.append(element)
-        item += 1
-    total_cost = sum(list_of_items)
+    total_cost = 0
+    data = read_csv(source)
+    dataframe = pd.DataFrame(data)
+    for item in dataframe.columns:
+        total_cost += dataframe[item]
     return total_cost
