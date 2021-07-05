@@ -5,13 +5,21 @@ import pandas as pd
 from src.read import read_csv
 
 
-def cost(source):
+class KS:
     """
-     cost method
-     """
-    total_cost = 0
-    data = read_csv(source)
-    dataframe = pd.DataFrame(data)
-    for item in dataframe.columns:
-        total_cost += dataframe[item]
-    return total_cost
+       Knapsack class
+    """
+
+    def __str__(self):
+        return self.__class__.__name__
+
+    def cost(self):
+        """
+         cost method
+         """
+        total_cost = 0
+        data = read_csv(self)
+        dataframe = pd.DataFrame(data)
+        for item in dataframe.columns:
+            total_cost += dataframe[item]
+        return total_cost
