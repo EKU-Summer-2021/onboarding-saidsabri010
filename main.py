@@ -11,4 +11,4 @@ data = read_csv(
     'main/Intelligent%20System%20Data/KP/KP_10.csv')
 dataframe = pd.DataFrame(data)
 k = KS(dataframe.values)
-print(k.cost(dataframe.index))
+print(k.cost(dataframe.values, dataframe.iloc[:4, 0:1].values, [1, 0, 0, 1, 1, 0]))

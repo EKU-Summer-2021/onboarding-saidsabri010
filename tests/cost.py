@@ -17,6 +17,6 @@ class MyTestCase(unittest.TestCase):
             'main/Intelligent%20System%20Data/KP/KP_10.csv')
         dataframe = pd.DataFrame(data)
         k = KS(dataframe.values)
-        actual = k.cost(dataframe.index)
-        expected = 474
+        actual = k.cost(dataframe.values, dataframe.iloc[:4, 0:1].values, [1, 0, 0, 1, 1, 0])
+        expected = 162
         self.assertEqual(expected, actual)

@@ -14,11 +14,15 @@ class KS:
     def __init__(self, data):
         self.data = data
 
-    def cost(self, items):
+    def cost(self, _, items_wanted_tobe_put, binary_list):
         """
-         cost method
+         cost function
         """
         total_cost = 0
-        for _ in range(len(items)):
-            total_cost = sum(self.data[:, 1])
+        for index, _ in enumerate(items_wanted_tobe_put):
+            weight, value = self.data[:, 0], self.data[:, 1]
+            if weight in items_wanted_tobe_put[index] and binary_list[index] == 1:
+                total_cost += value[index]
+            else:
+                continue
         return total_cost
